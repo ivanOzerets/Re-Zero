@@ -11,5 +11,6 @@ vim.api.nvim_create_user_command("ReZeroUpdate", function()
 end, {})
 
 vim.keymap.set("n", "<leader>tt", function()
+	if vim.bo.modified then vim.cmd("write") end
 	require("re-zero").open()
 end)
