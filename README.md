@@ -22,35 +22,35 @@ Re-Zero has been tested on Neovim v0.12+. Should work on Neovim 0.9+, but no gua
 
 ### Installation using [Lazy](https://github.com/folke/lazy.nvim)
 
-'''lua
+```lua
 { "ivanOzerets/re-zero" }
-'''
+```
 
-Then run ':Lazy sync'.
+Then run `:Lazy sync`.
 
 ### Installation using [Vim packages](https://github.com/neovim/neovim)
 
-'''lua
+```lua
 vim.pack.add({
     "https://github.com/ivanOzerets/re-zero",
 })
-'''
+```
 
 ### Installation using [Packer](https://github.com/wbthomason/packer.nvim)
 
-'''lua
+```lua
 use "ivanOzerets/re-zero
-'''
+```
 
-Then run ':PackerSync' (or ':PackerInstall').
+Then run `:PackerSync` (or `:PackerInstall`).
 
 ### Installation using [Vim-Plug](https://github.com/junegunn/vim-plug)
 
-'''vim
+```vim
 Plug 'ivanOzerets/re-zero'
-'''
+```
 
-Then run ':PlugInstall'.
+Then run `:PlugInstall`.
 
 ## Features
 
@@ -60,11 +60,11 @@ The todo.md file is broken up into three task lists.
 
 Each list is responsible for a task in a certain state.
 
-Per Mr. Forster's system, if a task is "marked", the task is active and lives in the 'active list'.
+Per Mr. Forster's system, if a task is "marked", the task is active and lives in the `active list`.
 
-If a task is new or a subtask, the task is pending and lives in the 'pending list'.
+If a task is new or a subtask, the task is pending and lives in the `pending list`.
 
-If a task is complete, the task lives in the 'finished list'.
+If a task is complete, the task lives in the `finished list`.
 
 ### Review Mode
 
@@ -90,7 +90,7 @@ If a task has a parent task attched and is marked completed, the subtask will ge
 
 ### Daily Archive
 
-At the end of every day, or triggered manually, a snapshot of the current todo.md file is archived under '~\re-zero\archive\'.
+At the end of every day, or triggered manually, a snapshot of the current todo.md file is archived under `~\re-zero\archive\`.
 
 The date at the top of the file is updated and the finished list get wiped.
 
@@ -100,7 +100,7 @@ The archive acts as a running record of the task the user finished everyday and 
 
 Taking inspiration from Notion, VimWiki, Emacs Org Mode, etc., creating a new task from new line actions works exactly how one would expect it to work.
 
-Pressing '<Enter>' in Insert mode or 'o' in Normal mode obeys the rules of creating a new task bullet (- [ ]) respective to the list the new task is in.
+Pressing `<Enter>` in Insert mode or `o` in Normal mode obeys the rules of creating a new task bullet (- [ ]) respective to the list the new task is in.
 
 ## File Format
 
@@ -122,7 +122,7 @@ At any time the user can start going down the list, top to bottom, and completin
 
 This list contains the set of new tasks the user has entered or will enter at any time.
 
-Jumping to a new task entry in the pending list is easy with the '<leader> td' keymap.
+Jumping to a new task entry in the pending list is easy with the `<leader> td` keymap.
 
 ### Finished List
 
@@ -132,25 +132,25 @@ All tasks in the list get wiped at the start of each new day.
 
 ## Commands
 
-- ':ReZero' -- Opens the todo.md file.
-- ':ReZeroReview' -- Starts review mode of the current pending tasks.
-- ':ReZeroUpdate' -- Runs a daily save check.
+- `:ReZero` -- Opens the todo.md file.
+- `:ReZeroReview` -- Starts review mode of the current pending tasks.
+- `:ReZeroUpdate` -- Runs a daily save check.
 
 ## Keymaps
 
 ### Normal Mode
 
-- '"<leader> tt' -- Open todo.md.
-- '"<leader> td' -- Jump to new task.
-- '"<leader> tu' -- Runs daily update.
-- '"<leader> tr' -- Starts review mode.
-    - 'h' -- Task has some resistance - Enter subtask.
-    - 'j' -- Task has no resistance (re-zero).
-    - 'k' -- Task is done.
-    - 'u' -- Undo previous review action.
-- '"o"' -- "Smart" enter from Normal mode.
-- '<Enter>' -- Move the hovered task to the finished list.
+- `"<leader> tt` -- Open todo.md.
+- `"<leader> td` -- Jump to new task.
+- `"<leader> tu` -- Runs daily update.
+- `"<leader> tr` -- Starts review mode.
+    - `h` -- Task has some resistance - Enter subtask.
+    - `j` -- Task has no resistance (re-zero).
+    - `k` -- Task is done.
+    - `u` -- Undo previous review action.
+- `"o"` -- "Smart" enter from Normal mode.
+- `<Enter>` -- Move the hovered task to the finished list.
 
 ### Insert Mode
 
-- '<Enter>' -- "Smart" enter from Insert mode.
+- `<Enter>` -- "Smart" enter from Insert mode.
