@@ -86,7 +86,7 @@ This implementation facilitates such an understanding and prompts the user to en
 
 If the user has no resistance to the current task (re-zero), the task gets filtered into the active list and the task is marked with an asterisk (- [*] some task).
 
-If a task has a parent task attched and is marked completed, the subtask will get filtered into the finished list while the parent task get refiltered into the pending list. The same mechanic applies to marking tasks as complete straight from the pending list.
+If a task has a parent task attached and is marked completed, the subtask will get filtered into the finished list while the parent task get re-filtered into the pending list. The same mechanic applies to marking tasks as complete straight from the pending list.
 
 ### Daily Archive
 
@@ -126,7 +126,7 @@ Jumping to a new task entry in the pending list is easy with the `<leader> td` k
 
 ### Finished List
 
-This list contains all the tasks that have been compelted.
+This list contains all the tasks that have been completed.
 
 All tasks in the list get wiped at the start of each new day.
 
@@ -140,10 +140,10 @@ All tasks in the list get wiped at the start of each new day.
 
 ### Normal Mode
 
-- `"<leader> tt` -- Open todo.md.
-- `"<leader> td` -- Jump to new task.
-- `"<leader> tu` -- Runs daily update.
-- `"<leader> tr` -- Starts review mode.
+- `<leader> tt` -- Open todo.md.
+- `<leader> td` -- Jump to new task.
+- `<leader> tu` -- Runs daily update.
+- `<leader> tr` -- Starts review mode.
     - `h` -- Task has some resistance - Enter subtask.
     - `j` -- Task has no resistance (re-zero).
     - `k` -- Task is done.
