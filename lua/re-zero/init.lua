@@ -253,6 +253,11 @@ function M.open()
 	vim.keymap.set("n", "o", function()
 		return smart_open(vim.api.nvim_get_current_line())
 	end, { buffer = buf, expr = true })
+
+	-- run daily check
+	vim.keymap.set("n", "<leader>tu", function()
+		M.daily_check()
+	end, { buffer = buf })
 end
 
 -- iterative over pending tasks in reverse
