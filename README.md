@@ -6,7 +6,7 @@ An implementation of Mark Forster's Resistance Zero Productivity system.
 
 TLDR | Four steps to the system:
 1. Write out a list of things to do.
-2. Starting at the end of the list, scan backwards an mark tasks with no resistance.
+2. Starting at the end of the list, scan backwards and mark tasks with no resistance.
 3. Starting with the end of the marked list, take action on every no resistance task.
 4. Repeat the first three steps.
 
@@ -39,7 +39,7 @@ vim.pack.add({
 ### Installation using [Packer](https://github.com/wbthomason/packer.nvim)
 
 ```lua
-use "ivanOzerets/re-zero
+use "ivanOzerets/re-zero"
 ```
 
 Then run `:PackerSync` (or `:PackerInstall`).
